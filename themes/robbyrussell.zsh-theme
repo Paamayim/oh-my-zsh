@@ -5,7 +5,7 @@ TRAPALRM () {
 }
 
 function battery_charge {
-    python2 ~/Dropbox/coding/zsh/battery.py
+    python2 $ZSH/battery.py
 }
 
 
