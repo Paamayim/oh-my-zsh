@@ -12,7 +12,7 @@ output = string.split(p.communicate()[0])
 
 percent = int(output[3][:-2]) if output[2] != "Full," else 100
 width = 10
- 
+
 if output[2] == "Discharging,":
     full = u'◂'
     empty = u'◃'
@@ -20,7 +20,7 @@ else:
     full = u'▸'
     empty = u'▹'
 
-marks = math.floor(width * (percent / 100.0) + 0.5)
+marks = math.ceil(width * (percent / 100.0))
 spaces = math.floor(width - marks)
 loader = (full * int(marks)) + (empty * int(spaces))
 
