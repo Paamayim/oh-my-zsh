@@ -8,7 +8,6 @@ function battery_charge {
     python2 $ZSH/battery.py
 }
 
-
 PROMPT='
 %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[blue]%}in %{$fg[yellow]%}${PWD/#$HOME/~} %{$fg[blue]%}$(git_prompt_info)%{$reset_color%}'
 
