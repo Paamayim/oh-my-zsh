@@ -1,9 +1,3 @@
-TMOUT=45
-
-TRAPALRM () {
-   zle reset-prompt
-}
-
 function battery_charge {
     python2 $ZSH/battery.py
 }
