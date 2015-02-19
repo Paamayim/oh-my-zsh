@@ -3,11 +3,11 @@ function battery_charge {
 }
 
 PROMPT='
-%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p%{$reset_color%} %{$fg[magenta]%}%n%{$reset_color%} %{$fg[blue]%}in %{$fg[yellow]%}${PWD/#$HOME/~} %{$fg[blue]%}$(git_prompt_info)%{$reset_color%}'
+%{$fg_bold[red]%}➜%{$reset_color%} %{$fg[blue]%}$(vi_mode_prompt_info)%{$reset_color%} %{$fg[yellow]%}${PWD/#$HOME/~} $(git_prompt_info)%{$reset_color%}'
 
-RPROMPT='$(battery_charge)'
+RPROMPT='%{$fg[green]%}%T%{$reset_color%}'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="on %{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}✗%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%} "
